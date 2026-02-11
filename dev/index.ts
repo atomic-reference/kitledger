@@ -138,8 +138,11 @@ const server = await createServer({
 });
 
 printAsciiLogo();
+const port = 3000;
+
+console.log('Starting Kitledger Server at', `http://localhost:${port}`);
 
 serve({
 	fetch: server.fetch,
-	port: 3000,
+	port: port,
 });
